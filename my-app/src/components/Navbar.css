@@ -1,0 +1,36 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.menuBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+}
+
+.menuItem {
+    position: relative; 
+    margin-right: 50px;
+    cursor: pointer;
+    color: black; 
+    text-decoration: none; 
+}
+
+.menuItem::after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 0; 
+    height: 2px; 
+    background-color: black; 
+}
+
+.menuItem:hover::after {
+    width: 100%; 
+}
