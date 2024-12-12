@@ -1,0 +1,12 @@
+.grid {
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 829px;
+    margin-top: 40px;
+    
+}
