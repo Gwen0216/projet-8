@@ -3,16 +3,33 @@ import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
   RouterProvider,
+  
 } from "react-router-dom";
 import './index.css';
-import App from './App';
+import App from './Pages/App';
 import reportWebVitals from './reportWebVitals';
+import Location from './Pages/Location';
+import About from './Pages/About';
+import Error from './Pages/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />
   },
+  {
+    path: "/location",
+    element: <Location />
+  },
+  {
+    path: "/about",
+    element: <About />
+  },
+  {
+    path: "/404",
+    element: <Error />
+  },
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

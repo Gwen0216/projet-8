@@ -1,10 +1,8 @@
-
-import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar';
-import Banner from './components/Banner';
-import Gallery from './components/Gallery';
-import Footer from './components/Footer';
+import Navbar from '../components/Navbar';
+import Banner from '../components/Banner';
+import Gallery from '../components/Gallery';
+import Footer from '../components/Footer';
 
 
 function App() {
