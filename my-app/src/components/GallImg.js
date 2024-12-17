@@ -1,12 +1,14 @@
 import React from "react";
 import "./GallImg.css";
 
-function GallImg() {
+function GallImg({ title, cover }) {
     return (
         <div className="cadre">
+            <div className="image-container">
+                <img src={cover} alt={title} className="cover-image" />  
+            </div>
             <div className="text-container">
-                <span className="line">Titre de la</span>
-                <span className="line">location</span>
+                <span className="line">{title}</span>  
             </div>
         </div>
     );

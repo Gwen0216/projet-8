@@ -80,7 +80,7 @@ function About() {
               className="collapse-button"
               onClick={() => setIsOpenSecurity(!isOpenSecurity)}
             >
-              <span className="section-title">Sécutité</span>
+              <span className="section-title">Sécurité</span>
               <span
                 className={`icon ${isOpenSecurity ? 'rotate' : ''}`}
               >

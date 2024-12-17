@@ -1,5 +1,4 @@
 import Navbar from '../components/Navbar';
-import Photo from '../components/Photo';
 import Footer from '../components/Footer';
 
 function Location () {
@@ -12,7 +11,7 @@ return (
        </div>
       </header>
       <div>
-        <Photo />
+      
       </div>
       <footer>
         <div>
