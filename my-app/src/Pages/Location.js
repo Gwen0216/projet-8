@@ -1,25 +1,78 @@
+import React, { useEffect, useState } from "react";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Api from '../components/Api'; 
+import Slideshow from '../components/Slideshow';
+import Title from "../components/Title";
+import Profil from "../components/Profil";
+import Description from "../components/Description";
+import { useParams } from "react-router-dom";
+import "./Location.css";
 
 function Location () {
+  const { id } = useParams();
+  const [locations, setLocation] = useState([]);  
+    const [loading, setLoading] = useState(true);  
+
+    
+    useEffect(() => {
+        Api.getLoc()  
+            .then(data => {
+              const selectedLocation = data.find(loc => loc.id === id);
+                setLocation(selectedLocation);  
+                setLoading(false);  
+            })
+            .catch(error => {
+                console.error("Erreur lors de la récupération des données : ", error);
+                setLoading(false);  
+            });
+    }, [id]);  
+
+    
+    if (loading) {
+        return <div>Chargement...</div>;
+    }
 return (
-    <div className="App">
-     <body>
+     <div>
       <header>
        <div>
         <Navbar />
        </div>
       </header>
       <div>
-      
+      <Slideshow 
+        pictures={locations.pictures} 
+        title={locations.title}
+        />
+      </div>
+      <div className="container">
+      <div>
+        <Title
+        title={locations.title}
+        location={locations.location}
+        tags={locations.tags}
+        />
+      </div>
+      <div>
+        <Profil 
+        name={locations.host.name}
+        picture={locations.host.picture}
+        rating={locations.rating}
+        />
+      </div>
+     </div>
+     <div>
+        <Description
+        description={locations.description}
+        equipments={locations.equipments}
+        />
       </div>
       <footer>
         <div>
           <Footer />
         </div>
         </footer>
-      </body>
-    </div>
+      </div>
 )
 }
 

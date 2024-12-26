@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Gallery.css";
 import GallImg from "./GallImg";
 import { Link } from "react-router-dom";
-import Api from './Api';  // Assurez-vous d'importer votre module API
+import Api from './Api';  
 
 function Gallery() {
     const [locations, setLocations] = useState([]);  
@@ -29,7 +29,7 @@ function Gallery() {
     return (
         <div className="grid">
             {locations.map((location) => (
-                <Link key={location.id} to={`/location/${location.id}`}>
+                 <Link key={location.id} to={`/location/${location.id}`}>
                     <GallImg 
                         title={location.title}  
                         cover={location.cover}  

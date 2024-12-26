@@ -1,13 +1,12 @@
 .grid {
-    background-color: #f6f6f6;  /* Fond gris de la grille */
+    background-color: #f6f6f6;  
     border-radius: 25px;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);  /* Crée 3 lignes égales */
-    grid-template-columns: repeat(3, 1fr);  /* Crée 3 colonnes égales */
+    grid-template-rows: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);  
     justify-items: center;
     align-items: center;
-    height: auto;  /* Ajuste la hauteur automatiquement */
-    min-height: 829px;  /* Hauteur minimale si nécessaire */
+    height: auto;  
+    min-height: 829px;  
     margin-top: 40px;
-    gap: 20px;  /* Ajoute de l'espace entre les éléments de la grille */
 }

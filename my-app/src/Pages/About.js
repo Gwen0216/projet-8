@@ -10,8 +10,7 @@ function About() {
   const [isOpenService, setIsOpenService] = useState(false);
   const [isOpenSecurity, setIsOpenSecurity] = useState(false);
   return (
-    <div className="App">
-      <body>
+      <div>
         <header>
           <div>
             <Navbar />
@@ -99,8 +98,7 @@ function About() {
             <Footer />
           </div>
         </footer>
-      </body>
-    </div>
+      </div>
   );
 }
 

@@ -1,0 +1,30 @@
+.errorPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.errorPage h1{
+    font-size: 288px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.errorPage p {
+    color: #ff6060;
+    font-size: 36px;
+    font-family: Montserrat;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.errorPage button {
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 60px ;
+}

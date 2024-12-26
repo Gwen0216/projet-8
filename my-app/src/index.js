@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     element: <App />
   },
   {
-    path: "/location",
+    path: "/location/:id",
     element: <Location />
   },
   {
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     element: <About />
   },
   {
-    path: "/404",
+    path: "*",
     element: <Error />
   },
 

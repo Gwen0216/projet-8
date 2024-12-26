@@ -5,7 +5,7 @@ function Banner() {
     return (
         <div className="banner">
             <div className="imgBanner">
-                <img className="imgBan" src="./imgbanner.png" alt="Bannière" />
+                <img className="imgBan" src="./images/imgbanner.png" alt="Bannière" />
             </div>
             <div className="overlay"></div> 
             <div className="textBanner">
