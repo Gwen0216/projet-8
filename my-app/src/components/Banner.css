@@ -44,3 +44,20 @@
     background-color: transparent; 
     padding: 20px;
 }
+
+@media (max-width: 767.98px) {
+    .banner{
+        height: 111px;
+        margin-top: 30px;
+    }
+    .textBanner{
+        font-size: 24px;
+        font-weight: 700;
+        font-family: Montserrat;
+        text-align: left;
+        line-height: 24px;
+       width: 225px;
+       margin-right: auto
+       
+    }
+}

@@ -23,10 +23,25 @@ function Slideshow({ pictures, title }) {
                             className="cover-slide"
                         />
                     </div>
-                    <img className="prev-button" src="/images/arrow-back.png" alt="fleche gauche" onClick={handlePrevious}/>
-                 <img className="next-button" src="/images/arrow-forward.png" alt="fleche droite" onClick={handleNext}/>
-                       
-                    
+                    {pictures.length > 1 && (
+                        <div className="navigation">
+                            <img
+                                className="prev-button"
+                                src="/images/arrow-back.png"
+                                alt="flèche gauche"
+                                onClick={handlePrevious}
+                            />
+                            <img
+                                className="next-button"
+                                src="/images/arrow-forward.png"
+                                alt="flèche droite"
+                                onClick={handleNext}
+                            />
+                        </div>
+                    )}
+                    <div className="image-counter">
+                        {currentIndex + 1} / {pictures.length}
+                    </div>
                 </>
             ) : (
                 <p>Aucune image disponible</p>

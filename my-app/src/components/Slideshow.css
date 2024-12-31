@@ -43,4 +43,30 @@
 }
 
 
+.image-counter {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 10px;
+}
 
+@media (max-width: 767.98px){
+    .slide img{
+        height:255px ;
+    }
+    .slideshow-container{
+        height: 255px;
+        margin-top: 30px;
+    }
+    .prev-button, .next-button{
+        width: 24px;
+        height: 24px;
+    }
+    .image-counter{
+        display: none;
+    }
+  }

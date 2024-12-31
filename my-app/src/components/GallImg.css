@@ -1,10 +1,12 @@
 .cadre {
     width: 340px;
     height: 340px;
+    min-width: 335px; 
+    min-height: 255px;
     position: relative;  
     overflow: hidden;  
     border-radius: 5%;  
-    margin: 20px 10px 20px 10px;
+    margin: 20px auto;
 }
 
 .image-container {
@@ -37,4 +39,26 @@
 .line {
     text-align: left;
     width: 100%;
+}
+@media (max-width: 767.98px) {
+    .cadre {
+        margin: 20px auto; 
+        display: flex;
+        justify-content: center;
+        height: 225px;
+        width: 100%;
+        align-items: center;
+        
+
+    }
+    .cover-image {
+        object-fit: cover;
+        
+    }
+    .text-container{
+        text-align: left;
+        margin-right: 160px;
+        
+    }
+    
 }

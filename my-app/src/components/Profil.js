@@ -17,7 +17,7 @@ function Profil({ name, picture, rating }) {
         <div className="profil-container">
             <div className="profil-header">
                 <p>{name}</p>
-                <img src={picture} alt="Photo de profil" />
+                <img src={picture} alt=" profil" />
             </div>
             <div className="rating">
             <div className="rating-stars">

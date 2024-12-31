@@ -13,3 +13,10 @@
 .foot img {
     width: 100%;
 }
+
+@media (max-width: 767.98px){
+    .foot{
+    margin-top: 10px;
+    }
+
+}

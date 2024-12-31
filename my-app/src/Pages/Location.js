@@ -6,27 +6,32 @@ import Slideshow from '../components/Slideshow';
 import Title from "../components/Title";
 import Profil from "../components/Profil";
 import Description from "../components/Description";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./Location.css";
 
 function Location () {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [locations, setLocation] = useState([]);  
     const [loading, setLoading] = useState(true);  
 
     
     useEffect(() => {
-        Api.getLoc()  
-            .then(data => {
-              const selectedLocation = data.find(loc => loc.id === id);
-                setLocation(selectedLocation);  
-                setLoading(false);  
-            })
-            .catch(error => {
-                console.error("Erreur lors de la récupération des données : ", error);
-                setLoading(false);  
-            });
-    }, [id]);  
+      Api.getLoc()
+        .then(data => {
+          const selectedLocation = data.find(loc => loc.id === id);
+          if (!selectedLocation) {
+            navigate("/error");
+          } else {
+            setLocation(selectedLocation); 
+          }
+          setLoading(false);
+        })
+        .catch(error => {
+          console.error("Erreur lors de la récupération des données : ", error);
+          navigate("/error");
+        });
+    }, [id, navigate]);  
 
     
     if (loading) {
