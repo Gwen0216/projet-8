@@ -48,7 +48,7 @@
         height: 225px;
         width: 100%;
         align-items: center;
-        
+        position: relative;
 
     }
     .cover-image {
@@ -57,8 +57,9 @@
     }
     .text-container{
         text-align: left;
-        margin-right: 160px;
+        margin-right: 50%;
         
     }
+   
     
 }

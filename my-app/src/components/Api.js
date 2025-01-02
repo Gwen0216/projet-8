@@ -1,5 +1,3 @@
-
-
 function getLoc() {
     return fetch("http://localhost:8080/api/properties", {
         method: "GET", 
