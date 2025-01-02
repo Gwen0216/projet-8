@@ -1,0 +1,65 @@
+.cadre {
+    width: 340px;
+    height: 340px;
+    min-width: 335px; 
+    min-height: 255px;
+    position: relative;  
+    overflow: hidden;  
+    border-radius: 5%;  
+    margin: 20px auto;
+}
+
+.image-container {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.cover-image {
+    width: 100%;    
+    height: 100%;   
+    object-fit: cover;  
+}
+
+.text-container {
+    position: absolute;  
+    bottom: 10px;  
+    color: white;
+    font-size: 18px;
+    line-height: 25.67px;
+    font-weight: 700;
+    z-index: 1;  
+    width: 45%;
+    margin-left: 5px;
+}
+
+.line {
+    text-align: left;
+    width: 100%;
+}
+@media (max-width: 767.98px) {
+    .cadre {
+        margin: 20px auto; 
+        display: flex;
+        justify-content: center;
+        height: 225px;
+        width: 100%;
+        align-items: center;
+        position: relative;
+
+    }
+    .cover-image {
+        object-fit: cover;
+        
+    }
+    .text-container{
+        text-align: left;
+        margin-right: 50%;
+        
+    }
+   
+    
+}

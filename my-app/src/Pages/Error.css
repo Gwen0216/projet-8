@@ -1,0 +1,56 @@
+.errorPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.errorPage h1{
+    font-size: 288px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.errorPage p {
+    color: #ff6060;
+    font-size: 36px;
+    font-family: Montserrat;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.errorPage button {
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 60px ;
+    cursor: pointer;
+}
+
+@media (max-width: 767.98px){
+    .errorPage h1{
+        font-size: 96px;
+        font-weight: 700;
+        margin-top: 80px;
+    }
+
+    .errorPage p {
+        color: #ff6060;
+        font-size: 18px;
+        font-family: Montserrat;
+        font-weight: 500;
+        margin-top: 70px;
+        text-align: center;
+       
+  }
+  .errorPage button {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 100px ;
+    margin-bottom: 80px;
+    cursor: pointer;
+}
+}
