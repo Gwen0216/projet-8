@@ -1,0 +1,22 @@
+.foot {
+    width: 100%;
+    display: flex;
+	justify-content: center;
+	align-content: center;
+    margin-top: 40px;
+	height: 209px;
+    position: absolute;
+	left: 0;
+	
+	
+}
+.foot img {
+    width: 100%;
+}
+
+@media (max-width: 767.98px){
+    .foot{
+    margin-top: 10px;
+    }
+
+}
