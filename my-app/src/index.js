@@ -11,23 +11,49 @@ import reportWebVitals from './reportWebVitals';
 import Location from './Pages/Location';
 import About from './Pages/About';
 import Error from './Pages/Error';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
+    element: (
+      <>
+        <Navbar />
+        <App />
+        <Footer />
+      </>
+    ),
   },
   {
     path: "/location/:id",
-    element: <Location />
+    element: (
+      <>
+        <Navbar />
+        <Location />
+        <Footer />
+      </>
+    ),
   },
   {
     path: "/about",
-    element: <About />
+    element: (
+      <>
+        <Navbar />
+        <About />
+        <Footer />
+      </>
+    ),
   },
   {
     path: "*",
-    element: <Error />
+    element: (
+      <>
+        <Navbar />
+        <Error />
+        <Footer />
+      </>
+    ),
   }],
   {
     future: {

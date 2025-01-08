@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import Api from '../components/Api'; 
 import Slideshow from '../components/Slideshow';
 import Title from "../components/Title";
@@ -13,7 +11,7 @@ function Location () {
   const { id } = useParams();
   const navigate = useNavigate();
   const [locations, setLocation] = useState([]);  
-    const [loading, setLoading] = useState(true);  
+  const [loading, setLoading] = useState(true);  
 
     
     useEffect(() => {
@@ -39,11 +37,6 @@ function Location () {
     }
 return (
      <div>
-      <header>
-       <div>
-        <Navbar />
-       </div>
-      </header>
       <div>
       <Slideshow 
         pictures={locations.pictures} 
@@ -52,31 +45,27 @@ return (
       </div>
       <div className="container">
       <div>
-        <Title
-        title={locations.title}
-        location={locations.location}
-        tags={locations.tags}
-        />
+          <Title
+            title={locations.title || "Titre non disponible"}
+            location={locations.location || "Localisation inconnue"}
+            tags={locations.tags || []}
+          />
+        </div>
+        <div>
+          <Profil 
+            name={locations.host?.name || "Nom non disponible"}
+            picture={locations.host?.picture || ""}
+            rating={locations.rating || 0}
+          />
+        </div>
       </div>
       <div>
-        <Profil 
-        name={locations.host.name}
-        picture={locations.host.picture}
-        rating={locations.rating}
-        />
-      </div>
-     </div>
-     <div>
         <Description
-        description={locations.description}
-        equipments={locations.equipments}
+          description={locations.description || "Description non disponible"}
+          equipments={locations.equipments || []}
         />
       </div>
-      <footer>
-        <div>
-          <Footer />
-        </div>
-        </footer>
+      
       </div>
 )
 }
