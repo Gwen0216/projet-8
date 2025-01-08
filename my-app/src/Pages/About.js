@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import Collapse from '../components/Collapse';
+import Banner from '../components/Banner';
 import './About.css';
 
 function About() {
@@ -11,13 +10,12 @@ function About() {
   const [isOpenSecurity, setIsOpenSecurity] = useState(false);
   return (
       <div>
-        <header>
-          <div>
-            <Navbar />
-          </div>
-        </header>
         <div>
-          <img className="imgAbout" src="./about.png" alt="montagne" />
+        <Banner 
+                imageSrc="./about.png" 
+                altText="Bannière de la page À propos" 
+                showText={false}
+            />
         </div>
         <div className="aboutContent">
           <div className="section">
@@ -93,11 +91,6 @@ function About() {
             </Collapse>
           </div>
         </div>
-        <footer>
-          <div>
-            <Footer />
-          </div>
-        </footer>
       </div>
   );
 }

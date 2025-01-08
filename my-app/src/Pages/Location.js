@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import Api from '../components/Api'; 
 import Slideshow from '../components/Slideshow';
 import Title from "../components/Title";
@@ -39,11 +37,6 @@ function Location () {
     }
 return (
      <div>
-      <header>
-       <div>
-        <Navbar />
-       </div>
-      </header>
       <div>
       <Slideshow 
         pictures={locations.pictures} 
@@ -72,11 +65,7 @@ return (
           equipments={locations.equipments || []}
         />
       </div>
-      <footer>
-        <div>
-          <Footer />
-        </div>
-        </footer>
+      
       </div>
 )
 }
