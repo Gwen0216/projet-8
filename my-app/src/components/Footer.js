@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Footer.css";
+import footBanner from "../images/footBanner.png"; 
+import sizeMobile from "../images/sizeMobile.png";
 
 function Footer() {
     const [imageSrc, setImageSrc] = useState("/images/footBanner.png");
@@ -7,9 +9,9 @@ function Footer() {
     useEffect(() => {
         const updateImage = () => {
             if (window.innerWidth <= 768) {
-                setImageSrc("/images/sizeMobile.png"); 
+                setImageSrc(sizeMobile); 
             } else {
-                setImageSrc("/images/footBanner.png");
+                setImageSrc(footBanner);
             }
         };
 

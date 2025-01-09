@@ -1,7 +1,7 @@
 import './App.css';
 import Banner from '../components/Banner';
 import Gallery from '../components/Gallery';
-
+import bannerImage from "../images/imgbanner.png";
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
      <div>
       <div>
           <Banner
-           imageSrc="./images/imgbanner.png" 
+           imageSrc={bannerImage}
            altText="Bannière de la page d'accueil" 
            showText={true} 
            showOverlay={true}

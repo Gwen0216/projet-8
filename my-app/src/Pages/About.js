@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Collapse from '../components/Collapse';
 import Banner from '../components/Banner';
+import aboutImage from "../images/about.png";
 import './About.css';
 
 function About() {
@@ -12,7 +13,7 @@ function About() {
       <div>
         <div>
         <Banner 
-                imageSrc="./about.png" 
+                imageSrc= {aboutImage}
                 altText="Bannière de la page À propos" 
                 showText={false}
             />
